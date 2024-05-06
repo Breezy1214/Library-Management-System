@@ -1,8 +1,7 @@
 import Books.Book;
-
 import java.util.ArrayList;
-
-public class User implements Borrowable {
+import java.io.Serializable;
+public class User implements Borrowable, Serializable {
     private String name;
     private int id;
     private ArrayList<Book> borrowedBooks;
@@ -32,5 +31,13 @@ public class User implements Borrowable {
         } else {
             System.out.println("This book was not borrowed by you.");
         }
+    }
+
+    public void printBorrowedBooks() {
+        if (borrowedBooks.isEmpty()) {
+            System.out.println("No books borrowed.");
+            return;
+        }
+        borrowedBooks.forEach(book -> System.out.println(book.getTitle()));
     }
 }

@@ -1,8 +1,13 @@
-import Books.*;
+import Books.Book;
+import Books.FictionBook;
+import Books.NonFictionBook;
+import java.util.HashMap;
+
 import java.util.Scanner;
 
 public class Main {
-    private static Library library = new Library();
+    private static Library library;
+    private static HashMap<Integer, User> users = new HashMap<>();
     private static Scanner scanner = new Scanner(System.in);
 
     private static void addBook() {
@@ -41,6 +46,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        library = (Library) FileHandler.loadState("library.dat");
+        if (library == null) library = new Library();
+
         while (true) {
             System.out.println("\nWelcome to the Library System!");
             System.out.println("1. Add Book");
@@ -67,6 +75,9 @@ public class Main {
                     findBook();
                     break;
                 case 5:
+                    FileHandler.saveState(library, "library.dat");
+                    FileHandler.saveState(users, "users.dat");
+                    System.out.println("Saved Data!");
                     System.out.println("Exiting...");
                     return;
                 default:
@@ -74,4 +85,5 @@ public class Main {
             }
         }
     }
+
 }

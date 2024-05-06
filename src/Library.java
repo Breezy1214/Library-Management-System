@@ -1,8 +1,9 @@
 import Books.Book;
+import java.io.Serializable;
 
 import java.util.HashMap;
 
-public class Library {
+public class Library implements Serializable {
     private HashMap<String, Book> books;
 
     public Library() {

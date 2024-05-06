@@ -50,3 +50,7 @@ S
 Q.idea/sonarlint/securityhotspotstore/a/7/a7cd952880fb06b883b667b293b8f595faebc323,a\0\a01e6d56ae31ff3454ce72fb8cd3feb725b074f6
 Å
 Q.idea/sonarlint/securityhotspotstore/b/f/bf181c85d76eba8dcfd9e8b7ac31908fb55ef8c2,3\f\3f16f77055c33857bb6f53e46063dc1e7e4255bb
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+7
+LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859

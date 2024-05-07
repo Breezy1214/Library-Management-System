@@ -1,15 +1,28 @@
 import Books.Book;
 import java.util.ArrayList;
 import java.io.Serializable;
+
 public class User implements Borrowable, Serializable {
     private String name;
+    private Role role;
     private int id;
+    private String password;
     private ArrayList<Book> borrowedBooks;
 
-    public User(String name, int id) {
+    public User(String name, int id, String password, Role role) {
         this.name = name;
         this.id = id;
+        this.password = password;
+        this.role = role;
         this.borrowedBooks = new ArrayList<>();
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Role getRole() {
+        return role;
     }
 
     @Override
@@ -17,7 +30,7 @@ public class User implements Borrowable, Serializable {
         if (book.isAvailable()) {
             borrowedBooks.add(book);
             book.setAvailability(false);
-            System.out.println("Books borrowed: " + book.getTitle());
+            System.out.println("Book borrowed: " + book.getTitle());
         } else {
             System.out.println("This book is not available.");
         }
@@ -27,7 +40,7 @@ public class User implements Borrowable, Serializable {
     public void returnBook(Book book) {
         if (borrowedBooks.remove(book)) {
             book.setAvailability(true);
-            System.out.println("Books.Book returned: " + book.getTitle());
+            System.out.println("Book returned: " + book.getTitle());
         } else {
             System.out.println("This book was not borrowed by you.");
         }

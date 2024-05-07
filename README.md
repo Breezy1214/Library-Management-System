@@ -13,32 +13,24 @@ This Library Management System is a simple Java application designed to manage b
 - Command-Line Interface for easy interaction.
 
 ## Prerequisites
+- Java JDK 21 or higher
 
-- Java JDK 11 or higher
-- Basic knowledge of command-line operations
+[//]: # (## Usage)
 
-## Setup and Installation
+[//]: # (Once you start the application, you will be prompted with a menu to choose from various actions:)
 
-1. **Clone the repository:**
-   ```bash
-   https://github.com/Breezy1214/Library-Management-System.git
-   cd library-management-system
-2. **Compile the Java files:**
-   ```bash
-   javac *.java
-3. **Run the application:**
-   ```bash
-   java LibraryCLI
+[//]: # ()
+[//]: # (1. Add Book)
 
-## Usage
-Once you start the application, you will be prompted with a menu to choose from various actions:
+[//]: # (2. Remove Book)
 
-1. Add Book
-2. Remove Book
-3. Display All Books
-4. Find Book
-5. Manage Users
-6. Exit
+[//]: # (3. Display All Books)
+
+[//]: # (4. Find Book)
+
+[//]: # (5. Manage Users)
+
+[//]: # (6. Exit)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

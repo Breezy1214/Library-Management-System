@@ -4,19 +4,23 @@ public class FileHandler {
     private static void createDirectory() {
         File dir = new File("Database");
         if (!dir.exists()) {
-            dir.mkdirs();
-            dir.getParent();
-                    dir.getParentFile();
-            System.out.println(dir.getParent());
+            dir.mkdir();
         }
     }
 
     public static void saveState(Object data, String fileName) {
+        try{
+            createDirectory();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("Database/" + fileName))) {
             createDirectory();
             out.writeObject(data);
         } catch (IOException e) {
             System.out.println("Error saving state: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 

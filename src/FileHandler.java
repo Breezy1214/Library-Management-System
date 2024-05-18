@@ -1,34 +1,39 @@
 import java.io.*;
 
 public class FileHandler {
+    private FileHandler() {
+    }
+
     private static void createDirectory() {
         File dir = new File("Database");
-        if (!dir.exists()) {
-            dir.mkdir();
+
+        try {
+            if (!dir.exists()) {
+                dir.mkdir();
+            }
+        } catch (SecurityException e) {
+            System.out.println("Error creating directory" + e.getMessage());
         }
     }
 
     public static void saveState(Object data, String fileName) {
-        try{
-            createDirectory();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        createDirectory();
 
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("Database/" + fileName))) {
-            createDirectory();
+        try (FileOutputStream fileOut = new FileOutputStream(String.format("Database/%s", fileName));
+             ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
             out.writeObject(data);
         } catch (IOException e) {
             System.out.println("Error saving state: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 
     public static Object loadState(String fileName) {
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("Database/" + fileName))) {
-            createDirectory();
+        createDirectory();
+
+        try (FileInputStream fileIn = new FileInputStream(String.format("Database/%s", fileName));
+             ObjectInputStream in = new ObjectInputStream(fileIn);) {
             return in.readObject();
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException | SecurityException e) {
             System.out.println("Error loading state: " + e.getMessage());
             return null;
         }

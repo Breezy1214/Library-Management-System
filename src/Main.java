@@ -28,50 +28,30 @@ public class Main {
     private static void executeCommand(int choice) {
         if (currentUser.getRole() == Role.ADMIN) {
             switch (choice) {
-                case 1:
-                    addBook();
-                    break;
-                case 2:
-                    removeBook();
-                    break;
-                case 3:
-                    library.displayBooks();
-                    break;
-                case 4:
-                    findBook();
-                    break;
-                case 5:
-                    addUser();
-                    break;
-                case 6:
-                    removeUser();
-                    break;
-                case 7:
+                case 1 -> addBook();
+                case 2 -> removeBook();
+                case 3 -> library.displayBooks();
+                case 4 -> findBook();
+                case 5 -> addUser();
+                case 6 -> removeUser();
+                case 7 -> {
                     saveAllData();
                     System.out.println("Exiting...");
                     System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 6.");
+                }
+                default -> System.out.println("Invalid choice. Please enter a number between 1 and 6.");
             }
         } else {
             switch (choice) {
-                case 1:
-                    borrowBook();
-                    break;
-                case 2:
-                    returnBook();
-                    break;
-                case 3:
-                    currentUser.printBorrowedBooks();
-                    break;
-                case 4:
+                case 1 -> borrowBook();
+                case 2 -> returnBook();
+                case 3 -> currentUser.printBorrowedBooks();
+                case 4 -> {
                     saveAllData();
                     System.out.println("Exiting...");
                     System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 4.");
+                }
+                default -> System.out.println("Invalid choice. Please enter a number between 1 and 4.");
             }
         }
     }
@@ -156,6 +136,10 @@ public class Main {
         System.out.println("Enter the title of the book to find: ");
         String title = scanner.nextLine();
         Book book = library.findBook(title);
+        if (book == null) {
+            System.out.println("Book does not exist!");
+            return;
+        }
         book.printInfo();
     }
 
@@ -175,7 +159,7 @@ public class Main {
 
     public static void main(String[] args) {
         loadAllData();
-        String adminName = "Shelsie";
+        String adminName = "Charles";
         User admin = userManager.getUser(adminName);
         if (admin == null) {
             userManager.addUser(adminName, 1, "12345", Role.ADMIN);
@@ -211,6 +195,10 @@ public class Main {
             int choice = scanner.nextInt();
             scanner.nextLine();
             executeCommand(choice);
+
+            if (choice == 4 || choice == 7){
+                break;
+            }
         }
     }
 

@@ -19,7 +19,7 @@ public class FileHandler {
     public static void saveState(Object data, String fileName) {
         createDirectory();
 
-        try (FileOutputStream fileOut = new FileOutputStream(String.format("Database/%s", fileName));
+        try (FileOutputStream fileOut = new FileOutputStream(String.format("Database/%s.dat", fileName));
              ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
             out.writeObject(data);
         } catch (IOException e) {
@@ -30,11 +30,10 @@ public class FileHandler {
     public static Object loadState(String fileName) {
         createDirectory();
 
-        try (FileInputStream fileIn = new FileInputStream(String.format("Database/%s", fileName));
+        try (FileInputStream fileIn = new FileInputStream(String.format("Database/%s.dat", fileName));
              ObjectInputStream in = new ObjectInputStream(fileIn);) {
             return in.readObject();
         } catch (IOException | ClassNotFoundException | SecurityException e) {
-            System.out.println("Error loading state: " + e.getMessage());
             return null;
         }
     }

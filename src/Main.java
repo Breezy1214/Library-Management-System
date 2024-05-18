@@ -2,6 +2,7 @@ import Books.Book;
 import Books.FictionBook;
 import Books.NonFictionBook;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -67,10 +68,13 @@ public class Main {
             Role role = Role.valueOf(scanner.nextLine().toUpperCase());
             System.out.print("Enter user ID: ");
             int id = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
             userManager.addUser(name, id, password, role);
         } catch (IllegalArgumentException e) {
             System.out.println("Please enter a valid Role: " + e.getMessage());
+        } catch (InputMismatchException e) {
+            System.out.println("Please enter a valid id: " + e.getMessage());
+        } finally {
+            scanner.nextLine(); // Consume newline
         }
     }
 
@@ -144,17 +148,16 @@ public class Main {
     }
 
     public static void loadAllData() {
-        library = (Library) FileHandler.loadState("library.dat");
+        library = (Library) FileHandler.loadState("library");
         if (library == null) library = new Library();
 
-        userManager = (UserManager) FileHandler.loadState("userManager.dat");
+        userManager = (UserManager) FileHandler.loadState("userManager");
         if (userManager == null) userManager = new UserManager();
     }
 
     public static void saveAllData() {
-        FileHandler.saveState(library, "library.dat");
-        FileHandler.saveState(userManager, "userManager.dat");
-        System.out.println("Saved all data!");
+        FileHandler.saveState(library, "library");
+        FileHandler.saveState(userManager, "userManager");
     }
 
     public static void main(String[] args) {
@@ -192,13 +195,21 @@ public class Main {
 
             System.out.print("Enter your choice: ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
-            executeCommand(choice);
+            try {
+                int choice = scanner.nextInt();
+                scanner.nextLine();
+                executeCommand(choice);
 
-            if (choice == 4 || choice == 7){
-                break;
+                if (choice == 4 || choice == 7) {
+                    break;
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Please enter a number. " + e.getMessage());
+                scanner.nextLine();
             }
+
+
         }
     }
 

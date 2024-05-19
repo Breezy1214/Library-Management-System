@@ -1,10 +1,10 @@
-package Books;
+package books;
 
 public class FictionBook extends Book {
     private String theme;
 
-    public FictionBook(String title, String author, String genre, boolean availability, String theme) {
-        super(title, author, genre, availability);
+    public FictionBook(String title, String author, String genre, boolean availability, String theme, long isbn) {
+        super(title, author, genre, availability, isbn);
         this.theme = theme;
     }
 

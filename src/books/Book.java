@@ -1,9 +1,21 @@
-package Books;
+package books;
+
 import java.io.Serializable;
 
 public abstract class Book implements Serializable {
     private String title;
     private String author;
+    private boolean availability;
+    private String genre;
+    private long isbn;
+
+    protected Book(String title, String author, String genre, boolean availability, long isbn) {
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.availability = availability;
+        this.isbn = isbn;
+    }
 
     public void setAvailability(boolean availability) {
         this.availability = availability;
@@ -21,18 +33,12 @@ public abstract class Book implements Serializable {
         return genre;
     }
 
-    public boolean isAvailable() {
-        return availability;
+    public long getIsbn() {
+        return isbn;
     }
 
-    private String genre;
-    private boolean availability;
-
-    public Book(String title, String author, String genre, boolean availability) {
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
-        this.availability = availability;
+    public boolean isAvailable() {
+        return availability;
     }
 
     public abstract void printInfo();

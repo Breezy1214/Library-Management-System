@@ -1,0 +1,44 @@
+The Lost City, Emily Patterson, Adventure, true, 978-1-234567-00-1, Exploration, Fiction
+Beyond the Stars, Michael Greene, Science Fiction, true, 978-1-234567-01-8, Space Exploration, Fiction
+The Silent Forest, Sarah Johnson, Mystery, true, 978-1-234567-02-5, Crime, Fiction
+The Art of War, Sun Tzu, Philosophy, true, 978-1-234567-03-2, Strategy, Non-Fiction
+Into the Wild, Jon Krakauer, Biography, true, 978-1-234567-04-9, Adventure, Non-Fiction
+The Great Gatsby, F. Scott Fitzgerald, Classic, true, 978-1-234567-05-6, Roaring Twenties, Fiction
+Pride and Prejudice, Jane Austen, Romance, true, 978-1-234567-06-3, Social Commentary, Fiction
+To Kill a Mockingbird, Harper Lee, Drama, true, 978-1-234567-07-0, Racial Injustice, Fiction
+A Brief History of Time, Stephen Hawking, Science, true, 978-1-234567-08-7, Cosmology, Non-Fiction
+1984, George Orwell, Dystopian, true, 978-1-234567-09-4, Totalitarianism, Fiction
+The Catcher in the Rye, J.D. Salinger, Bildungsroman, true, 978-1-234567-10-0, Alienation, Fiction
+Brave New World, Aldous Huxley, Science Fiction, true, 978-1-234567-11-7, Dystopia, Fiction
+Frankenstein, Mary Shelley, Gothic, true, 978-1-234567-12-4, Science Fiction, Fiction
+The Hobbit, J.R.R. Tolkien, Fantasy, true, 978-1-234567-13-1, Adventure, Fiction
+Moby-Dick, Herman Melville, Adventure, true, 978-1-234567-14-8, Obsession, Fiction
+War and Peace, Leo Tolstoy, Historical Fiction, true, 978-1-234567-15-5, Napoleonic Wars, Fiction
+The Odyssey, Homer, Epic Poetry, true, 978-1-234567-16-2, Heroism, Fiction
+Crime and Punishment, Fyodor Dostoevsky, Psychological Fiction, true, 978-1-234567-17-9, Guilt, Fiction
+The Adventures of Huckleberry Finn, Mark Twain, Adventure, true, 978-1-234567-18-6, Race Relations, Fiction
+The Lord of the Rings, J.R.R. Tolkien, Fantasy, true, 978-1-234567-19-3, Friendship, Fiction
+The Road, Cormac McCarthy, Post-Apocalyptic, true, 978-1-234567-20-9, Survival, Fiction
+Don Quixote, Miguel de Cervantes, Adventure, true, 978-1-234567-21-6, Chivalry, Fiction
+The Count of Monte Cristo, Alexandre Dumas, Adventure, true, 978-1-234567-22-3, Revenge, Fiction
+Dracula, Bram Stoker, Gothic, true, 978-1-234567-23-0, Vampires, Fiction
+The Picture of Dorian Gray, Oscar Wilde, Gothic, true, 978-1-234567-24-7, Hedonism, Fiction
+The Hitchhiker's Guide to the Galaxy, Douglas Adams, Science Fiction, true, 978-1-234567-25-4, Comedy, Fiction
+The Alchemist, Paulo Coelho, Fantasy, true, 978-1-234567-26-1, Personal Legend, Fiction
+The Da Vinci Code, Dan Brown, Mystery, true, 978-1-234567-27-8, Conspiracy, Fiction
+Harry Potter and the Philosopher's Stone, J.K. Rowling, Fantasy, true, 978-1-234567-28-5, Magic, Fiction
+The Hunger Games, Suzanne Collins, Dystopian, true, 978-1-234567-29-2, Survival, Fiction
+The Girl with the Dragon Tattoo, Stieg Larsson, Mystery, true, 978-1-234567-30-8, Investigation, Fiction
+The Kite Runner, Khaled Hosseini, Historical Fiction, true, 978-1-234567-31-5, Redemption, Fiction
+Gone with the Wind, Margaret Mitchell, Historical Fiction, true, 978-1-234567-32-2, Civil War, Fiction
+The Secret Garden, Frances Hodgson Burnett, Children's Literature, true, 978-1-234567-33-9, Friendship, Fiction
+The Shining, Stephen King, Horror, true, 978-1-234567-35-3, Supernatural, Fiction
+Lord of the Flies, William Golding, Allegory, true, 978-1-234567-36-0, Human Nature, Fiction
+A Song of Ice and Fire: A Game of Thrones, George R.R. Martin, Fantasy, true, 978-1-234567-37-7, Political Intrigue, Fiction
+The Giver, Lois Lowry, Science Fiction, true, 978-1-234567-38-4, Dystopia, Fiction
+Charlotte's Web, E.B. White, Children's Literature, true, 978-1-234567-39-1, Friendship, Fiction
+Anne of Green Gables, L.M. Montgomery, Bildungsroman, true, 978-1-234567-40-7, Orphan, Fiction
+The Princess Bride, William Goldman, Fantasy, true, 978-1-234567-41-4, Adventure, Fiction
+The Help, Kathryn Stockett, Historical Fiction, true, 978-1-234567-42-1, Civil Rights, Fiction
+Little Women, Louisa May Alcott, Coming-of-Age, true, 978-1-234567-43-8, Family, Fiction
+The Outsiders, S.E. Hinton, Coming-of-Age, true, 978-1-234567-44-5, Friendship, Fiction

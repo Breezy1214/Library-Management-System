@@ -1,14 +1,14 @@
-import Books.Book;
-import Books.FictionBook;
-import Books.NonFictionBook;
+import books.Book;
+import books.FictionBook;
+import books.NonFictionBook;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
+    private static final Scanner scanner = new Scanner(System.in);
     private static Library library;
     private static UserManager userManager;
-    private static Scanner scanner = new Scanner(System.in);
     private static User currentUser;
 
     private static void authenticateUser() {
@@ -119,12 +119,14 @@ public class Main {
         String genre = scanner.nextLine();
         System.out.print("Enter theme or subject: ");
         String themeOrSubject = scanner.nextLine();
+        System.out.println("Enter ISBN: ");
+        long isbn = scanner.nextLong();
 
         Book book;
         if (type.equalsIgnoreCase("Fiction")) {
-            book = new FictionBook(title, author, genre, true, themeOrSubject);
+            book = new FictionBook(title, author, genre, true, themeOrSubject, isbn);
         } else {
-            book = new NonFictionBook(title, author, genre, true, themeOrSubject);
+            book = new NonFictionBook(title, author, genre, true, themeOrSubject, isbn);
         }
 
         library.addBook(book);
@@ -150,6 +152,7 @@ public class Main {
     public static void loadAllData() {
         library = (Library) FileHandler.loadState("library");
         if (library == null) library = new Library();
+        library.loadPredefinedBooks("src/PredefinedBooks.txt");
 
         userManager = (UserManager) FileHandler.loadState("userManager");
         if (userManager == null) userManager = new UserManager();

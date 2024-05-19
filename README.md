@@ -2,7 +2,10 @@
 
 ## Overview
 
-This Library Management System is a simple Java application designed to manage books and users in a library setting. The system allows for adding and removing books, managing user registrations, and handling book borrow and return operations. It uses serialization for data persistence, saving and loading the state of books and users from files.
+This Library Management System is a simple Java school project designed to manage books and users in a library setting.
+The
+system allows for adding and removing books, managing user registrations, and handling book borrow and return
+operations. It uses serialization for data persistence, saving and loading the state of books and users from files.
 
 ## Features
 
@@ -13,6 +16,7 @@ This Library Management System is a simple Java application designed to manage b
 - Command-Line Interface for easy interaction.
 
 ## Prerequisites
+
 - Java JDK 21 or higher
 
 [//]: # (## Usage)
@@ -20,11 +24,12 @@ This Library Management System is a simple Java application designed to manage b
 [//]: # (Once you start the application, you will be prompted with a menu to choose from various actions:)
 
 [//]: # ()
+
 [//]: # (1. Add Book)
 
 [//]: # (2. Remove Book)
 
-[//]: # (3. Display All Books)
+[//]: # (3. Display All books)
 
 [//]: # (4. Find Book)
 
@@ -33,4 +38,5 @@ This Library Management System is a simple Java application designed to manage b
 [//]: # (6. Exit)
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
